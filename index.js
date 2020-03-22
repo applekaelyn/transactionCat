@@ -6,7 +6,7 @@ const app = new Koa();
 app.use(bodyParser());
 
 app.use(async ctx => {
-  const params = ctx.request.body;
+  const params = ctx.request.query;
   const goods = params.goodsIds.split(','); 
 
   console.log('goods:', goods);
