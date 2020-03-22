@@ -4,6 +4,7 @@ async function spy(ip, goodsIds) {
   const args = [];
   if (ip) args.push(`--proxy-server=${ip}`);
   const browser = await puppeteer.launch({
+    headless: true,
     args,
   });
   const page = await browser.newPage();
